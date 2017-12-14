@@ -16,12 +16,13 @@ void setup()
   //noiseSeed((long)random(500));
   size(1280, 720, P2D);
   frameRate(60);
+  background(0, 0, 0);
   grid = new Grid();
   throwChunk();
 }
 
 void draw() {
-  background(0, 0, 0);
+  //background(0, 0, 0);
   grid.updateVectors();
   grid.draw();   
   

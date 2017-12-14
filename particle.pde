@@ -12,13 +12,13 @@ class Particle {
     speed = new PVector(0, 0);
     acc = new PVector(0, 0);
     
-    maxSpeed = 0.5;
+    maxSpeed = 0.1;
     
-    c = color(255, 255, 255);
+    c = color(255, 255, 255, 1);
   }
   
   public void setColor(int r, int g, int b) {
-    c = color(r, g, b);
+    c = color(r, g, b, 1);
   }
   
   public void update(PVector[][] field, float cellSize) {
@@ -54,6 +54,7 @@ class Particle {
   public void draw() {
     if (pos.x > 0 && pos.y > 0) {
       stroke(c);
+      
       point(pos.x, pos.y);
     }
   }

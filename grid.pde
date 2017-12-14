@@ -52,7 +52,7 @@ class Grid {
     yoff = 0;
     zoff = 10;
     
-    sc = 0.1;
+    sc = PI/18;
     
   }
   
@@ -65,11 +65,13 @@ class Grid {
       for (int j = 0; j < gridSize.y; j++) {
         directions[i][j] = PVector.fromAngle(noise(xoff, yoff, zoff) * TWO_PI);
         yoff += sc;
-        zoff += 0.001;
+        //zoff += 0.001;
       }
       yoff = 0;
       xoff += sc;
     }
+    
+    zoff += 0.007;
     
   }
   
